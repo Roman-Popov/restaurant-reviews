@@ -99,7 +99,14 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
         row.appendChild(day);
 
         const time = document.createElement('td');
-        time.innerHTML = operatingHours[key];
+        let timeData = operatingHours[key];
+        const commaPos = timeData.indexOf(',');
+        if (commaPos === -1) {
+            time.innerHTML = timeData;
+        } else {
+            time.innerHTML = `${timeData.slice(0, commaPos + 1)} <br> ${timeData.slice(commaPos+2)}`;
+        }
+
         row.appendChild(time);
 
         hours.appendChild(row);
@@ -133,13 +140,9 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
     const li = document.createElement('li');
-    const name = document.createElement('p');
-    name.innerHTML = review.name;
-    li.appendChild(name);
-
-    const date = document.createElement('p');
-    date.innerHTML = review.date;
-    li.appendChild(date);
+    // const name = document.createElement('p');
+    // name.innerHTML = review.name;
+    // li.appendChild(name);
 
     const rating = document.createElement('p');
     rating.innerHTML = `Rating: ${review.rating}`;
@@ -148,6 +151,10 @@ createReviewHTML = (review) => {
     const comments = document.createElement('p');
     comments.innerHTML = review.comments;
     li.appendChild(comments);
+
+    const date = document.createElement('p');
+    date.innerHTML = `${review.name},    ${review.date}`;
+    li.appendChild(date);
 
     return li;
 }

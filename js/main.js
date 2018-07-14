@@ -67,7 +67,8 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
         select.append(option);
     });
 }
-console.dir(L)
+
+
 /**
  * Initialize leaflet map, called from HTML.
  */
