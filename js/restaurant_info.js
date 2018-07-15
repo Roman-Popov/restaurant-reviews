@@ -146,6 +146,13 @@ createReviewHTML = (review) => {
 
     const rating = document.createElement('p');
     rating.innerHTML = `Rating: ${review.rating}`;
+    if (review.rating <= 2.5) {
+        rating.classList.add('red');
+    } else if (review.rating <= 4) {
+        rating.classList.add('orange');
+    } else {
+        rating.classList.add('green');
+    }
     li.appendChild(rating);
 
     const comments = document.createElement('p');
