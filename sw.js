@@ -18,6 +18,11 @@ self.addEventListener('install', e => {
                 'img/9.jpg',
                 'img/10.jpg',
                 'img/favicon.png',
+                'img/icons/email-icon.png',
+                'img/icons/github-icon.png',
+                'img/icons/telegram-icon.png',
+                'img/icons/udacity-icon.png',
+                'img/icons/vk-icon.png',
                 'js/dbhelper.js',
                 'js/main.js',
                 'js/restaurant_info.js'

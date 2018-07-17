@@ -51,12 +51,55 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 
 #footer {
     background-color: #444;
-    color: #aaa;
     font-size: 8pt;
     letter-spacing: 1px;
-    padding: 25px;
-    text-align: center;
+    padding-top: 25px;
     text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-text,
+.contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f3f3f3;
+}
+
+.footer-text {
+    width: 100%;
+    margin: 1.5em 0;
+}
+
+.footer-text a {
+    margin: 0 0.75em;
+}
+
+.contacts {
+    justify-content: space-between;
+    width: 20em;
+}
+
+.contacts a {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0.5em 0.05em black;
+    transition: box-shadow 0.5s;
+    outline: none;
+}
+
+.contacts a:hover,
+.contacts a:focus {
+    box-shadow: 0 0 0.5em 0.2em orange,
+        inset 0 0 0.25em 0.1em orange;
+}
+
+.contacts img {
+    max-height: 2.5em;
+    max-width: 2.5em;
 }
 
 
@@ -312,8 +355,6 @@ nav h1 a {
 }
 
 .inside #footer {
-    bottom: 0;
-    position: absolute;
     width: 50%;
     box-sizing: border-box;
 }
@@ -360,7 +401,7 @@ nav h1 a {
 }
 
 #reviews-container {
-    padding: 30px 40px 80px;
+    padding: 30px 40px 40px;
 }
 
 #reviews-container h2 {
