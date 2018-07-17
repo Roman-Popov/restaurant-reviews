@@ -25,7 +25,8 @@ self.addEventListener('install', e => {
                 'img/icons/vk-icon.png',
                 'js/dbhelper.js',
                 'js/main.js',
-                'js/restaurant_info.js'
+                'js/restaurant_info.js',
+                'restaurant.html'
             ]);
         })
     );
